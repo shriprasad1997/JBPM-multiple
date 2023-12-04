@@ -13,6 +13,8 @@ public class Leave implements java.io.Serializable {
 	private java.lang.String status;
 	private Approval approval;
 
+	private java.lang.Long days;
+
 	public Leave() {
 	}
 
@@ -48,12 +50,22 @@ public class Leave implements java.io.Serializable {
 		this.approval = approval;
 	}
 
+	public java.lang.Long getDays() {
+		return this.days;
+	}
+
+	public void setDays(java.lang.Long days) {
+		this.days = days;
+	}
+
 	public Leave(java.lang.Long leaveId, com.myspace.leave_demo.Employee emp,
-			java.lang.String status, com.myspace.leave_demo.Approval approval) {
+			java.lang.String status, com.myspace.leave_demo.Approval approval,
+			java.lang.Long days) {
 		this.leaveId = leaveId;
 		this.emp = emp;
 		this.status = status;
 		this.approval = approval;
+		this.days = days;
 	}
 
 }

@@ -15,6 +15,8 @@ public class Employee implements java.io.Serializable {
 
 	private com.myspace.leave_demo.Department department;
 
+	private com.myspace.leave_demo.Employee manager;
+
 	public Employee() {
 	}
 
@@ -58,14 +60,24 @@ public class Employee implements java.io.Serializable {
 		this.department = department;
 	}
 
+	public com.myspace.leave_demo.Employee getManager() {
+		return this.manager;
+	}
+
+	public void setManager(com.myspace.leave_demo.Employee manager) {
+		this.manager = manager;
+	}
+
 	public Employee(java.lang.Long empId, java.lang.String fName,
 			java.lang.String lName, java.lang.Long level,
-			com.myspace.leave_demo.Department department) {
+			com.myspace.leave_demo.Department department,
+			com.myspace.leave_demo.Employee manager) {
 		this.empId = empId;
 		this.fName = fName;
 		this.lName = lName;
 		this.level = level;
 		this.department = department;
+		this.manager = manager;
 	}
 
 }
